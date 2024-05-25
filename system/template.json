@@ -1,0 +1,86 @@
+{
+	"Actor": {
+		"types": [
+			"character",
+			"npc",
+			"vehicle"
+		],
+		"templates": {
+			"attributes": {
+				"str": {
+					"min": 1,
+					"value": 1,
+					"max": 8
+				},
+				"bod": {
+					"min": 1,
+					"value": 1,
+					"max": 8
+				},
+				"rfl": {
+					"min": 1,
+					"value": 1,
+					"max": 8
+				},
+				"dex": {
+					"min": 1,
+					"value": 1,
+					"max": 8
+				},
+				"int": {
+					"min": 1,
+					"value": 1,
+					"max": 8
+				},
+				"wil": {
+					"min": 1,
+					"value": 1,
+					"max": 8
+				},
+				"cha": {
+					"min": 1,
+					"value": 1,
+					"max": 9
+				},
+				"edg": {
+					"min": 1,
+					"value": 1,
+					"max": 9
+				}
+			}
+		},
+		"character": {
+			"templates": [
+				"attributes"
+			]
+		},
+		"npc": {
+			"templates": [
+				"attributes"
+			]
+		}
+	},
+	"Item": {
+		"types": [
+			"armor",
+			"skill",
+			"trait",
+			"weapon"
+		],
+		"templates": {},
+		"armor": {},
+		"skill": {
+			"complexity": "sb",
+			"description": "",
+			"links": {
+				"one": "",
+				"two": ""
+			},
+			"parentSkill": "",
+			"tn": 0,
+			"xp": 0
+		},
+		"trait": {},
+		"weapon": {}
+	}
+}

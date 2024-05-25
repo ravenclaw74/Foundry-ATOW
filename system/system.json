@@ -1,0 +1,68 @@
+{
+	"id": "atow",
+	"title": "BattleTech: A Time of War",
+	"description": "An unofficial system for playing BattleTech: A Time of War by Catalyst Game Labs",
+	"version": "0.1.0",
+	"compatibility": {
+		"minimum": "12",
+		"verified": "12"
+	},
+	"authors": [
+		{
+			"name": "Paul Maskelyne",
+			"discord": "Muttley#3296",
+			"email": "mu77ley@gmail.com",
+			"mastodon": "@muttley@dice.camp"
+		}
+	],
+	"esmodules": [
+		"atow-compiled.mjs"
+	],
+	"styles": [
+		"css/atow.css"
+	],
+	"packs": [
+		{
+			"name": "system_documentation",
+			"label": "System Documentation",
+			"system": "atow",
+			"path": "packs/system_documentation",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "macros",
+			"label": "Macros",
+			"system": "atow",
+			"path": "packs/macros",
+			"type": "Macro",
+			"private": false,
+			"flags": {}
+		}
+	],
+	"packFolders": [
+		{
+			"name": "BattleTech: A Time of War",
+			"sorting": "a",
+			"color": "#a31e1f",
+			"packs": [
+				"macros",
+				"system_documentation"
+			]
+		}
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "i18n/en.json",
+			"flags": {}
+		}
+	],
+	"socket": true,
+	"url": "https://github.com/Muttley/foundryvtt-atow",
+	"manifest": "https://github.com/Muttley/foundryvtt-atow/releases/latest/download/system.json",
+	"download": "https://github.com/Muttley/foundryvtt-atow/releases/latest/download/atow.zip",
+	"background": "systems/atow/assets/images/atow-splash.webp"
+}

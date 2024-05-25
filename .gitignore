@@ -1,0 +1,8 @@
+.vscode/
+node_modules/
+scratch/
+system/css/
+system/i18n/
+system/packs/
+
+atow-compiled*

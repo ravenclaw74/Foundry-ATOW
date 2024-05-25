@@ -1,0 +1,31 @@
+ATOW.attributes.bod: Body
+ATOW.attributes.cha: Charisma
+ATOW.attributes.dex: Dexterity
+ATOW.attributes.edg: Edge
+ATOW.attributes.int: Intelligence
+ATOW.attributes.rfl: Reflexes
+ATOW.attributes.str: Strength
+ATOW.attributes.wil: Willpower
+ATOW.complexity.ca: (CA) Complex-Advanced
+ATOW.complexity.cb: (CB) Complex-Basic
+ATOW.complexity.sa: (SA) Simple-Advanced
+ATOW.complexity.sb: (SB) Simple-Basic
+ATOW.migration.begin_migration: "Performing data upgrades for BattleTech: A Time of War"
+ATOW.migration.begin_schema: "Applying updates for BattleTech: A Time of War schema v{version}"
+ATOW.migration.completed_migration: "Completed data updgrades for BattleTech: A Time of War"
+ATOW.migration.completed_schema: "Completed applying updates for BattleTech: A Time of War schema v{version}"
+ATOW.settings.debug_enabled.hint: Enables additional debug features
+ATOW.settings.debug_enabled.label: Enable Debug
+ATOW.settings.migrate_system_compendiums.hint: Perform data migration on built in system compendiums (don't modify this unless you know what you are doing)
+ATOW.settings.migrate_system_compendiums.label: Migrate System Compendiums
+ATOW.settings.system_version.hint: Records the current system version number (don't modify this unless you know what you are doing)
+ATOW.settings.system_version.label: System Version
+ATOW.settings.world_schema_version.hint: Records the current schema version for the world data. (don't modify this unless you know what you are doing)
+ATOW.settings.world_schema_version.label: Schema Version
+TYPES.Actor.character: Character
+TYPES.Actor.npc: NPC
+TYPES.Actor.vehicle: Vehicle
+TYPES.Item.armor: Armor
+TYPES.Item.skill: Skill
+TYPES.Item.trait: Trait
+TYPES.Item.weapon: Weapon
