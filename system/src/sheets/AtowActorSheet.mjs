@@ -57,8 +57,8 @@ export default class AtowActorSheet extends ActorSheet {
 				label: CONFIG.ATOW.ATTRIBUTES_SHORT[key],
 				link: attribute.link,
 				tooltip: game.i18n.localize(`ATOW.attribute_tooltips.${key}`),
-				value: attribute.value ?? 1,
-				xp: attribute.value * 100,
+				value: attribute.value,
+				xp: attribute.xp,
 			});
 		}
 

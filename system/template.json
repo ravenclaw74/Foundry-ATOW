@@ -49,11 +49,17 @@
 						"max": 9
 					}
 				}
+			},
+			"background": {
+				"background": {
+					"affiliation": ""
+				}
 			}
 		},
 		"character": {
 			"templates": [
-				"attributes"
+				"attributes",
+				"background"
 			]
 		},
 		"npc": {

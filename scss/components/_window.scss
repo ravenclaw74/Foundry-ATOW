@@ -16,16 +16,21 @@
 
 	input {
 		@include green-display-text;
+		background: none;
 
-		height: min-content;
+		height: max-content;
 		line-height: 1.2;
 
 		padding: 2px;
 
 		text-overflow: ellipsis;
 
-		border: 1px dashed darkgreen;
-		border-radius: 0.5rem;
+		border: none;
+
+		&:hover {
+			border: 1px dashed darkgreen;
+			border-radius: 0.5rem;
+		}
 
 		&:focus {
 			color: white;
@@ -35,7 +40,18 @@
 		}
 
 		&::placeholder {
-			color: grey;
+			@include placeholder-text;
 		}
+
 	}
+
+	.centered {
+		text-align: center;
+	}
+
+	.outlined {
+		border: 1px dashed darkgreen;
+		border-radius: 0.5rem;
+	}
+
 }

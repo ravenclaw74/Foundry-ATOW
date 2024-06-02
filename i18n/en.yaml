@@ -26,6 +26,7 @@ ATOW.attributes.short.str: STR
 ATOW.attributes.short.wil: WIL
 ATOW.attributes.str: Strength
 ATOW.attributes.wil: Willpower
+ATOW.character.affiliation: Affiliation
 ATOW.complexity.ca: (CA) Complex-Advanced
 ATOW.complexity.cb: (CB) Complex-Basic
 ATOW.complexity.sa: (SA) Simple-Advanced

@@ -1,17 +1,27 @@
 <header class="actor-header">
 	<img
+		class="actor-img"
 		data-edit="img"
 		height="128"
 		src="{{actor.img}}"
 		title="{{actor.name}}"
 		width="128"
 	/>
-	<h1 class="actor-name">
+	<div class="actor-header-details">
+		<h1 class="actor-name">
+			<input
+				name="name"
+				placeholder="{{localize 'ATOW.input_placeholder.name'}}"
+				type="text"
+				value="{{actor.name}}"
+			/>
+		</h1>
 		<input
-			name="name"
+			class="centered"
+			name="system.background.affiliation"
+			placeholder="{{localize "ATOW.character.affiliation"}}"
 			type="text"
-			value="{{actor.name}}"
-			placeholder="{{localize 'ATOW.input_placeholder.name'}}"
-		/>
-	</h1>
+			value="{{actor.system.background.affiliation}}"
+		>
+	</div>
 </header>

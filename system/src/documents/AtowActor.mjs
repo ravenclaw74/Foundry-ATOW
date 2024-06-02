@@ -5,6 +5,8 @@
  */
 export default class AtowActor extends Actor {
 
+	attributeXp = 0;
+
 	/** @inheritDoc */
 	prepareData() {
 		super.prepareData();
@@ -27,9 +29,15 @@ export default class AtowActor extends Actor {
 	}
 
 	_prepareCharacterData() {
+		this._calculateAttributeExtras();
+	}
 
+	_calculateAttributeExtras() {
 		for (const key of Object.keys(this.system.attributes)) {
 			const attribute = this.system.attributes[key];
+
+			attribute.xp = attribute.value * 100;
+			this.attributeXp += attribute.xp;
 
 			if (attribute.value >= 11) {
 				const tmpLink = Math.floor(attribute.value / 3);

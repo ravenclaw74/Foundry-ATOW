@@ -4,3 +4,10 @@
 	color: limegreen;
 	text-shadow: green 1px 0 10px;
 }
+
+@mixin placeholder-text {
+	font-family: $font-secondary;
+
+	color: darkgray;
+	text-shadow: gray 1px 0 10px;
+}

@@ -9,11 +9,15 @@
 	@include content-box;
 }
 
-.actor-name {
+img.actor-image {
+	display: grid;
+	grid-row: span 2;
+}
+
+.actor-header-details {
 	@include p-reset;
-
-	margin-right: 8px;
-
+	display: grid;
+	grid-template-columns: 1fr;
 }
 
 .actor-sheet {
