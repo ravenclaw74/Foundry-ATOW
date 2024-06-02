@@ -1,0 +1,30 @@
+.actor-header {
+    display: grid;
+
+	grid-template-columns: 128px 1fr;
+	column-gap: 8px;
+
+	height: min-content;
+
+	@include content-box;
+}
+
+.actor-name {
+	@include p-reset;
+
+	margin-right: 8px;
+
+}
+
+.actor-sheet {
+	@include p-reset;
+	display: grid;
+	grid-template-rows: min-content min-content 1fr;
+	row-gap: 8px;
+}
+
+h1.actor-name {
+	font-size: 2em;
+	text-align: center;
+}
+

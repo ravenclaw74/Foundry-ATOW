@@ -1,0 +1,51 @@
+<div class="actor-details">
+	<table>
+		<thead>
+			<tr>
+				<th style="text-align: left;">
+					{{localize "ATOW.attributes_table.attribute"}}
+				</th>
+				<th>
+					{{localize "ATOW.attributes_table.score"}}
+				</th>
+				<th>
+					{{localize "ATOW.attributes_table.link"}}
+				</th>
+				<th>
+					{{localize "ATOW.attributes_table.xp"}}
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each attributes}}
+				<tr>
+					<td
+						data-tooltip="{{this.tooltip}}"
+						data-tooltip-direction="LEFT"
+						style="text-align: left;"
+					>
+						{{this.label}}
+					</td>
+					<td>
+						<input
+							data-dtype="Number"
+							name="{{this.key}}"
+							type="number"
+							value="{{this.value}}"
+						>
+					</td>
+					<td>
+						{{numberFormat
+							this.link
+							decimals=0
+							sign=true
+						}}
+					</td>
+					<td>
+						{{this.xp}}
+					</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>

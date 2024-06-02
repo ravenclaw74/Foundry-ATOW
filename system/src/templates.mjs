@@ -9,7 +9,14 @@
  * @returns {Promise}
  */
 export default async function preloadHandlebarsTemplates() {
-	const partials = [];
+	const partials = [
+		"systems/atow/templates/actor/_shared-partials/header.hbs",
+		"systems/atow/templates/actor/character/parts/attribute-table.hbs",
+		"systems/atow/templates/actor/character/tabs/attributes.hbs",
+		"systems/atow/templates/actor/character/tabs/inventory.hbs",
+		"systems/atow/templates/actor/character/tabs/skills.hbs",
+		"systems/atow/templates/item/_shared-partials/header.hbs",
+	];
 
 	const paths = {};
 	for (const path of partials) {

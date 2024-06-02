@@ -1,0 +1,28 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+
+	{{> actor/_shared-partials/header}}
+
+	<nav class="sheet-navigation" data-group="primary">
+		<a class="item active" data-tab="attributes">
+			{{localize "ATOW.navigation.attributes"}}
+		</a>
+
+		<a class="item" data-tab="skills">
+			{{localize "ATOW.navigation.skills"}}
+		</a>
+
+		<a class="item" data-tab="inventory">
+			{{localize "ATOW.navigation.inventory"}}
+		</a>
+	</nav>
+
+	<section class="sheet-body">
+		<section class="sheet-content content">
+			{{> actor/character/tabs/attributes }}
+			{{> actor/character/tabs/inventory }}
+			{{> actor/character/tabs/skills }}
+		</section>
+	</section>
+
+</form>
+

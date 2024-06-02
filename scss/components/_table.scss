@@ -1,0 +1,48 @@
+.actor-details {
+	@include p-reset;
+	@include green-display-text;
+
+	padding: 4px;
+
+	border: 2px solid limegreen;
+	border-radius: 0.5rem;
+
+	width: min-content;
+
+
+	table,
+	thead {
+		border: none;
+		background: transparent;
+
+		text-align: center;
+
+		margin: 0;
+	}
+
+	tr {
+		@include green-display-text;
+		background: none;
+		line-height: 0.8;
+
+		&:hover {
+    		background-color: rgba(0, 0, 0, 0.2);
+    		color: white;
+    		text-shadow: limegreen 1px 0 10px;
+		}
+	}
+
+	td,
+	th {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	td {
+		margin: 0;
+	}
+
+	th {
+		font-size: 1.1em;
+	}
+}

@@ -1,0 +1,27 @@
+nav {
+	@include content-box;
+	display: flex;
+	justify-content: space-evenly;
+	height: min-content;
+	line-height: 1.5em;
+
+	a {
+		font-family: $font-secondary;
+		font-size: 1.2em;
+		text-overflow: ellipsis;
+		text-transform: uppercase;
+
+		color: green;
+
+		&.active {
+			color: white;
+			text-shadow: limegreen 1px 0 10px;
+			text-decoration: underline;
+		}
+
+		&:hover {
+			text-shadow: green 1px 0 10px;
+			text-decoration: underline;
+		}
+	}
+}

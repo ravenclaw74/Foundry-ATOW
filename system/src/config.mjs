@@ -14,6 +14,17 @@ ATOW.ATTRIBUTES = {
 	edg: "ATOW.attributes.edg",
 };
 
+ATOW.ATTRIBUTES_SHORT = {
+	str: "ATOW.attributes.short.str",
+	bod: "ATOW.attributes.short.bod",
+	rfl: "ATOW.attributes.short.rfl",
+	dex: "ATOW.attributes.short.dex",
+	int: "ATOW.attributes.short.int",
+	wil: "ATOW.attributes.short.wil",
+	cha: "ATOW.attributes.short.cha",
+	edg: "ATOW.attributes.short.edg",
+};
+
 ATOW.COMPLEXITIES = {
 	ca: "ATOW.complexity.ca",
 	cb: "ATOW.complexity.cb",

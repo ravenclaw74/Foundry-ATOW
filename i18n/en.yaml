@@ -1,19 +1,43 @@
+ATOW.attribute_tooltips.bod: A character’s BOD (Body) Attribute indicates how sturdy and “in shape” he is, measuring raw endurance as well as how much damage the character can withstand in combat. Higher BOD scores reflect greater durability and the ability to perform strenuous tasks for longer durations.
+ATOW.attribute_tooltips.cha: The CHA (Charisma) Attribute measures a character’s personal appeal, affecting how those around him react to his general appearance, mannerisms and speech. While not an indicator of physical beauty per se, higher CHA scores describe characters who are more appealing and inspiring to others.
+ATOW.attribute_tooltips.dex: The DEX (Dexterity) Attribute defines a character’s fine motor control and physical acuity, a vital quality for everything from operating a computer to firing a handgun. Higher DEX scores reflect a steadier hand and superior hand-eye coordination.
+ATOW.attribute_tooltips.edg: The EDG (Edge) Attribute is easily one of the most powerful Attributes a player character (or critical NPC) possesses. Representing raw luck, a character’s EDG points can be “burned” in game play to affect Action Checks, altering their outcomes slightly or even forcing a “do over” that can snatch a victory out of certain defeat. Characters with a higher EDG have more luck on their side.
+ATOW.attribute_tooltips.int: As can be surmised, the INT (Intelligence) Attribute measures a character’s brainpower, particularly his memory, higher reasoning and deductive powers. Higher INT scores reflect keener minds.
+ATOW.attribute_tooltips.rfl: The RFL (Reflexes) Attribute measures a character’s swiftness and reaction time, affecting how fast he can react to threats or cover ground. Higher RFL scores reflect less hesitation, better response times and quicker overall movement.
+ATOW.attribute_tooltips.str: As its name implies, the STR (Strength) Attribute measures a character’s raw muscle power, affecting the amount of weight he can lift and carry, and how much damage he can deliver in melee combat. Higher STR scores define physically stronger characters.
+ATOW.attribute_tooltips.wil: The WIL (Willpower) Attribute measures a character’s bravery and his capacity to “think for himself”, as well as his ability to steel his nerves and rally his body against fear and physical exhaustion, and to take charge of a situation. Higher WIL scores describe bolder and more decisive characters.
+ATOW.attributes_table.attribute: Attribute
+ATOW.attributes_table.link: Link
+ATOW.attributes_table.score: Score
+ATOW.attributes_table.xp: XP
 ATOW.attributes.bod: Body
 ATOW.attributes.cha: Charisma
 ATOW.attributes.dex: Dexterity
 ATOW.attributes.edg: Edge
 ATOW.attributes.int: Intelligence
 ATOW.attributes.rfl: Reflexes
+ATOW.attributes.short.bod: BOD
+ATOW.attributes.short.cha: CHA
+ATOW.attributes.short.dex: DEX
+ATOW.attributes.short.edg: EDG
+ATOW.attributes.short.int: INT
+ATOW.attributes.short.rfl: REF
+ATOW.attributes.short.str: STR
+ATOW.attributes.short.wil: WIL
 ATOW.attributes.str: Strength
 ATOW.attributes.wil: Willpower
 ATOW.complexity.ca: (CA) Complex-Advanced
 ATOW.complexity.cb: (CB) Complex-Basic
 ATOW.complexity.sa: (SA) Simple-Advanced
 ATOW.complexity.sb: (SB) Simple-Basic
+ATOW.input_placeholder.name: Name
 ATOW.migration.begin_migration: "Performing data upgrades for BattleTech: A Time of War"
 ATOW.migration.begin_schema: "Applying updates for BattleTech: A Time of War schema v{version}"
 ATOW.migration.completed_migration: "Completed data updgrades for BattleTech: A Time of War"
 ATOW.migration.completed_schema: "Completed applying updates for BattleTech: A Time of War schema v{version}"
+ATOW.navigation.attributes: Attributes
+ATOW.navigation.inventory: Inventory
+ATOW.navigation.skills: Skills
 ATOW.settings.debug_enabled.hint: Enables additional debug features
 ATOW.settings.debug_enabled.label: Enable Debug
 ATOW.settings.migrate_system_compendiums.hint: Perform data migration on built in system compendiums (don't modify this unless you know what you are doing)

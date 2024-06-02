@@ -7,45 +7,47 @@
 		],
 		"templates": {
 			"attributes": {
-				"str": {
-					"min": 1,
-					"value": 1,
-					"max": 8
-				},
-				"bod": {
-					"min": 1,
-					"value": 1,
-					"max": 8
-				},
-				"rfl": {
-					"min": 1,
-					"value": 1,
-					"max": 8
-				},
-				"dex": {
-					"min": 1,
-					"value": 1,
-					"max": 8
-				},
-				"int": {
-					"min": 1,
-					"value": 1,
-					"max": 8
-				},
-				"wil": {
-					"min": 1,
-					"value": 1,
-					"max": 8
-				},
-				"cha": {
-					"min": 1,
-					"value": 1,
-					"max": 9
-				},
-				"edg": {
-					"min": 1,
-					"value": 1,
-					"max": 9
+				"attributes": {
+					"str": {
+						"min": 0,
+						"value": 1,
+						"max": 8
+					},
+					"bod": {
+						"min": 0,
+						"value": 1,
+						"max": 8
+					},
+					"rfl": {
+						"min": 0,
+						"value": 1,
+						"max": 8
+					},
+					"dex": {
+						"min": 0,
+						"value": 1,
+						"max": 8
+					},
+					"int": {
+						"min": 0,
+						"value": 1,
+						"max": 8
+					},
+					"wil": {
+						"min": 0,
+						"value": 1,
+						"max": 8
+					},
+					"cha": {
+						"min": 0,
+						"value": 1,
+						"max": 9
+					},
+					"edg": {
+						"min": 0,
+						"value": 1,
+						"max": 9
+					}
 				}
 			}
 		},

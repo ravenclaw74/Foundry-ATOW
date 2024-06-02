@@ -11,7 +11,7 @@ export default function registerHandlebarsHelpers() {
 	});
 
 	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
-		return CONFIG.AC2D20[arg1][arg2] ? CONFIG.AC2D20[arg1][arg2] : arg2;
+		return CONFIG.ATOW[arg1][arg2] ? CONFIG.ATOW[arg1][arg2] : arg2;
 	});
 
 	Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {

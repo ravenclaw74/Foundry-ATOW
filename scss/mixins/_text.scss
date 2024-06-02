@@ -1,0 +1,6 @@
+@mixin green-display-text {
+	font-family: $font-secondary;
+
+	color: limegreen;
+	text-shadow: green 1px 0 10px;
+}

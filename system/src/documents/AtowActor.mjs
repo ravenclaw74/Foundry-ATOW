@@ -26,7 +26,35 @@ export default class AtowActor extends Actor {
 		if (this.type === "vehicle") this._prepareVehicleData();
 	}
 
-	_prepareCharacterData() {}
+	_prepareCharacterData() {
+
+		for (const key of Object.keys(this.system.attributes)) {
+			const attribute = this.system.attributes[key];
+
+			if (attribute.value >= 11) {
+				const tmpLink = Math.floor(attribute.value / 3);
+				attribute.link = Math.min(5, tmpLink);
+			}
+			else if (attribute.value === 10) {
+				attribute.link = 2;
+			}
+			else if (attribute.value >= 7 && attribute.value <= 9) {
+				attribute.link = 1;
+			}
+			else if (attribute.value >= 4 && attribute.value <= 6) {
+				attribute.link = 0;
+			}
+			else if (attribute.value >= 2 && attribute.value <= 3) {
+				attribute.link = -1;
+			}
+			else if (attribute.value === 1) {
+				attribute.link = -2;
+			}
+			else {
+				attribute.link = -4;
+			}
+		}
+	}
 
 	_prepareNpcData() {}
 

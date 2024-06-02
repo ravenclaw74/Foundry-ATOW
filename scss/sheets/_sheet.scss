@@ -1,0 +1,5 @@
+
+.sheet-content {
+	display: grid;
+	@include content-box;
+}
