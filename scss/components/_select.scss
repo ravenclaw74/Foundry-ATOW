@@ -1,0 +1,43 @@
+.atow-select {
+	@include display-text;
+	border: 2px outset limegreen;
+	border-radius: 0.2rem;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.atow-select label span {
+	font-size: 0.9em;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	padding: 3px 0;
+	padding-top: 6px;
+	display: block;
+}
+
+.atow-select label input {
+	position: absolute;
+	display: none;
+}
+
+.atow-select label input + span {
+	@include display-text-dim;
+
+	&:hover {
+		@include display-text;
+	}
+}
+
+.atow-select input:checked + span {
+	@include display-text;
+	color: white;
+	text-shadow: limegreen 1px 0 10px;
+
+	&:hover {
+		@include display-text;
+		color: white;
+		text-shadow: limegreen 1px 0 10px;
+	}
+}

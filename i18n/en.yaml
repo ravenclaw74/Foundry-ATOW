@@ -21,12 +21,23 @@ ATOW.attributes.short.cha: CHA
 ATOW.attributes.short.dex: DEX
 ATOW.attributes.short.edg: EDG
 ATOW.attributes.short.int: INT
-ATOW.attributes.short.rfl: REF
+ATOW.attributes.short.rfl: RFL
 ATOW.attributes.short.str: STR
 ATOW.attributes.short.wil: WIL
 ATOW.attributes.str: Strength
 ATOW.attributes.wil: Willpower
 ATOW.character.affiliation: Affiliation
+ATOW.character.condition.fatigue_damage: Fatigue Damage
+ATOW.character.condition.standard_damage: Standard Damage
+ATOW.character.condition.stunned: Stunned
+ATOW.character.condition.unconscious: Unconscious
+ATOW.character.movement.climb: Climb
+ATOW.character.movement.crawl: Crawl
+ATOW.character.movement.run_evade: Run / Evade
+ATOW.character.movement.sprint: Sprint
+ATOW.character.movement.swim: Swim
+ATOW.character.movement.walk: Walk
+ATOW.character.movement_speed.tooltip: Movement (Meters per Turn)
 ATOW.complexity.ca: (CA) Complex-Advanced
 ATOW.complexity.cb: (CB) Complex-Basic
 ATOW.complexity.sa: (SA) Simple-Advanced
@@ -38,6 +49,7 @@ ATOW.migration.completed_migration: "Completed data updgrades for BattleTech: A 
 ATOW.migration.completed_schema: "Completed applying updates for BattleTech: A Time of War schema v{version}"
 ATOW.navigation.attributes: Attributes
 ATOW.navigation.inventory: Inventory
+ATOW.navigation.personal-data: Personal Data
 ATOW.navigation.skills: Skills
 ATOW.settings.debug_enabled.hint: Enables additional debug features
 ATOW.settings.debug_enabled.label: Enable Debug
@@ -47,6 +59,9 @@ ATOW.settings.system_version.hint: Records the current system version number (do
 ATOW.settings.system_version.label: System Version
 ATOW.settings.world_schema_version.hint: Records the current schema version for the world data. (don't modify this unless you know what you are doing)
 ATOW.settings.world_schema_version.label: Schema Version
+ATOW.sheet_mode.edit: Edit
+ATOW.sheet_mode.lock: Lock
+ATOW.sheet_warnings.derived_value: This is an auto-calculated value that cannot be edited.
 TYPES.Actor.character: Character
 TYPES.Actor.npc: NPC
 TYPES.Actor.vehicle: Vehicle

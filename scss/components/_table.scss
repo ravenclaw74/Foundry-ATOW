@@ -1,48 +1,37 @@
-.actor-details {
-	@include p-reset;
-	@include green-display-text;
+table,
+thead {
+	border: none;
+	background: transparent;
 
-	padding: 4px;
+	text-align: center;
 
-	border: 2px solid limegreen;
-	border-radius: 0.5rem;
+	margin: 0;
+}
 
-	width: min-content;
+tr {
+	@include display-text;
+	background: none;
+	line-height: 0.8;
 
-
-	table,
-	thead {
-		border: none;
-		background: transparent;
-
-		text-align: center;
-
-		margin: 0;
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.2);
+		color: white;
+		text-shadow: limegreen 1px 0 10px;
 	}
 
-	tr {
-		@include green-display-text;
-		background: none;
-		line-height: 0.8;
-
-		&:hover {
-    		background-color: rgba(0, 0, 0, 0.2);
-    		color: white;
-    		text-shadow: limegreen 1px 0 10px;
-		}
+	&:nth-child(even) {
+		background-color: rgba(50, 205, 50, 0.05);
 	}
 
-	td,
-	th {
-		padding-left: 8px;
-		padding-right: 8px;
+	&:nth-child(even) {
+		background-color: rgba(50, 205, 50, 0.05);
 	}
+}
 
-	td {
-		margin: 0;
-	}
+td {
+	margin: 0;
+}
 
-	th {
-		font-size: 1.1em;
-	}
+th {
+	font-size: 1.1em;
 }

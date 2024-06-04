@@ -1,8 +1,15 @@
-@mixin green-display-text {
+@mixin display-text {
 	font-family: $font-secondary;
 
 	color: limegreen;
 	text-shadow: green 1px 0 10px;
+}
+
+@mixin display-text-dim {
+	font-family: $font-secondary;
+
+	color: green;
+	text-shadow: darkgreen 1px 0 10px;
 }
 
 @mixin placeholder-text {

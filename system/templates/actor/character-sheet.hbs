@@ -1,6 +1,6 @@
-<form class="actor-sheet {{cssClass}}" autocomplete="off">
+<form class="actor-sheet {{cssClass}}" autocomplete="off" spellcheck="false">
 
-	{{> actor/_shared-partials/header}}
+	{{> actor/_shared-partials/header }}
 
 	<nav class="sheet-navigation" data-group="primary">
 		<a class="item active" data-tab="attributes">
@@ -14,11 +14,15 @@
 		<a class="item" data-tab="inventory">
 			{{localize "ATOW.navigation.inventory"}}
 		</a>
+		<a class="item" data-tab="personal-data">
+			{{localize "ATOW.navigation.personal-data"}}
+		</a>
 	</nav>
 
 	<section class="sheet-body">
 		<section class="sheet-content content">
 			{{> actor/character/tabs/attributes }}
+			{{> actor/character/tabs/personal-data }}
 			{{> actor/character/tabs/inventory }}
 			{{> actor/character/tabs/skills }}
 		</section>

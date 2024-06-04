@@ -27,21 +27,26 @@
 						{{this.label}}
 					</td>
 					<td>
-						<input
-							data-dtype="Number"
-							name="{{this.key}}"
-							type="number"
-							value="{{this.value}}"
-						>
+						{{#if ../editModeEnabled}}
+							<input
+								class="num-short-2"
+								data-dtype="Number"
+								name="{{this.key}}"
+								type="number"
+								value="{{this.value}}"
+							>
+						{{else}}
+							{{this.value}}
+						{{/if}}
 					</td>
-					<td>
+					<td data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}">
 						{{numberFormat
 							this.link
 							decimals=0
 							sign=true
 						}}
 					</td>
-					<td>
+					<td data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}">
 						{{this.xp}}
 					</td>
 				</tr>

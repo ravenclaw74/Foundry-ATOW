@@ -9,19 +9,28 @@
 	/>
 	<div class="actor-header-details">
 		<h1 class="actor-name">
-			<input
-				name="name"
-				placeholder="{{localize 'ATOW.input_placeholder.name'}}"
-				type="text"
-				value="{{actor.name}}"
-			/>
+			{{#if editModeEnabled}}
+				<input
+					name="name"
+					placeholder="{{localize 'ATOW.input_placeholder.name'}}"
+					type="text"
+					value="{{actor.name}}"
+				/>
+			{{else}}
+				{{actor.name}}
+			{{/if}}
 		</h1>
-		<input
-			class="centered"
-			name="system.background.affiliation"
-			placeholder="{{localize "ATOW.character.affiliation"}}"
-			type="text"
-			value="{{actor.system.background.affiliation}}"
-		>
+		<div class="actor-affiliation">
+			{{#if editModeEnabled}}
+				<input
+					name="system.background.affiliation"
+					placeholder="{{localize "ATOW.character.affiliation"}}"
+					type="text"
+					value="{{actor.system.background.affiliation}}"
+				>
+			{{else}}
+				{{actor.system.background.affiliation}}
+			{{/if}}
+		</div>
 	</div>
 </header>

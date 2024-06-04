@@ -13,6 +13,7 @@ export default function registerSystemSettings() {
 		requiresReload: true,
 	});
 
+
 	game.settings.register(SYSTEM_ID, "world_schema_version", {
 		name: game.i18n.localize("ATOW.settings.world_schema_version.label"),
 		hint: game.i18n.localize("ATOW.settings.world_schema_version.hint"),
@@ -21,6 +22,7 @@ export default function registerSystemSettings() {
 		default: -1,
 		type: Number,
 	});
+
 
 	game.settings.register(SYSTEM_ID, "system_version", {
 		name: game.i18n.localize("ATOW.settings.system_version.label"),
@@ -31,6 +33,7 @@ export default function registerSystemSettings() {
 		type: String,
 	});
 
+
 	game.settings.register(SYSTEM_ID, "migrate_system_compendiums", {
 		name: game.i18n.localize("ATOW.settings.migrate_system_compendiums.label"),
 		hint: game.i18n.localize("ATOW.settings.migrate_system_compendiums.hint"),
@@ -40,4 +43,5 @@ export default function registerSystemSettings() {
 		default: false,
 		requiresReload: true,
 	});
+
 }

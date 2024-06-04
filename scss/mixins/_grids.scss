@@ -3,6 +3,8 @@ $columns: 6;
 %grid-styles {
 	@include p-reset;
 	display: grid;
+	row-gap: 4px;
+	column-gap: 4px;
 }
 
 @mixin grid-x-columns {
@@ -14,4 +16,13 @@ $columns: 6;
 	}
 }
 
+@mixin span-x-columns {
+	@for $i from 1 through $columns {
+		.span-#{$i}-columns {
+			grid-column: span #{$i};
+		}
+	}
+}
+
 @include grid-x-columns;
+@include span-x-columns;

@@ -54,12 +54,40 @@
 				"background": {
 					"affiliation": ""
 				}
+			},
+			"condition": {
+				"damage": {
+					"standard": {
+						"min": 0,
+						"value": 0,
+						"max": 0
+					},
+					"fatigue": {
+						"min": 0,
+						"value": 0,
+						"max": 0
+					},
+					"stunned": false,
+					"unconscious": false
+				}
+			},
+			"movement": {
+				"movement": {
+					"climb": 0,
+					"crawl": 0,
+					"run": 0,
+					"sprint": 0,
+					"swim": 0,
+					"walk": 0
+				}
 			}
 		},
 		"character": {
 			"templates": [
 				"attributes",
-				"background"
+				"background",
+				"condition",
+				"movement"
 			]
 		},
 		"npc": {

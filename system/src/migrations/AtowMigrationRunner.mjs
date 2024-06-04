@@ -7,6 +7,27 @@ export default class AtowMigrationRunner {
 
 	latestVersion = 0;
 
+
+	get currentVersion() {
+		return game.settings.get(SYSTEM_ID, "world_schema_version");
+	}
+
+
+	get migrateSystemCompendiumsEnabled() {
+		return game.settings.get(SYSTEM_ID, "migrate_system_compendiums");
+	}
+
+
+	get noMigrationNeeded() {
+		return this.latestVersion <= this.currentVersion;
+	}
+
+
+	// Go through all available migrations and select only those which are
+	// of a higher version than the current system version.
+	//
+	// Selected migrations are instantiated
+	//
 	async buildMigrations() {
 		const unsortedMigrations = [];
 
@@ -22,14 +43,15 @@ export default class AtowMigrationRunner {
 			}
 		}
 
-		this.allMigrations = unsortedMigrations.sort((a, b) => {
-			return a.version - b.version;
-		});
+		// Sort the selected migrations so they are applied in the correct order
+		//
+		this.allMigrations = unsortedMigrations.sort(
+			(a, b) => {
+				return a.version - b.version;
+			}
+		);
 	}
 
-	get currentVersion() {
-		return game.settings.get(SYSTEM_ID, "world_schema_version");
-	}
 
 	async migrateCompendium(pack) {
 		const documentName = pack.documentName;
@@ -77,6 +99,7 @@ export default class AtowMigrationRunner {
 		atow.logger.log(`Migrated all "${documentName}" documents from Compendium "${pack.collection}"`);
 	}
 
+
 	async migrateSceneTokens(scene) {
 		for (const token of scene.tokens) {
 			try {
@@ -116,15 +139,13 @@ export default class AtowMigrationRunner {
 		}
 	}
 
+
 	async migrateSettings() {
 		await this.currentMigrationTask.updateSettings();
 	}
 
-	get migrateSystemCompendiumsEnabled() {
-		return game.settings.get(SYSTEM_ID, "migrate_system_compendiums");
-	}
 
-	async migrateWorldCompendiums() {
+	async migrateCompendiums() {
 		for (let pack of game.packs) {
 			// Don't migrate system packs unless the proper debug setting is
 			// enabled
@@ -136,6 +157,7 @@ export default class AtowMigrationRunner {
 			await this.migrateCompendium(pack);
 		}
 	}
+
 
 	async migrateWorldActors() {
 		const actors = game.actors.map(a => [a, true])
@@ -184,6 +206,7 @@ export default class AtowMigrationRunner {
 		}
 	}
 
+
 	async migrateWorldItems() {
 		const items = game.items.map(a => [a, true])
 			.concat(Array.from(game.items.invalidDocumentIds).map(
@@ -210,13 +233,15 @@ export default class AtowMigrationRunner {
 		}
 	}
 
+
 	async migrateWorldScenes() {
 		for (const scene of game.scenes) {
 			await this.migrateSceneTokens(scene);
 		}
 	}
 
-	async migrateWorld() {
+
+	async performMigrations() {
 		const version = this.currentMigrationTask.version;
 
 		const startMessage = game.i18n.format("ATOW.migration.begin_schema", {version});
@@ -228,16 +253,13 @@ export default class AtowMigrationRunner {
 		await this.migrateWorldActors();
 		await this.migrateWorldItems();
 		await this.migrateWorldScenes();
-		await this.migrateWorldCompendiums();
+		await this.migrateCompendiums();
 
 		atow.logger.log(
 			game.i18n.format("ATOW.migration.completed_schema", {version})
 		);
 	}
 
-	needsMigration() {
-		return this.latestVersion > this.currentVersion;
-	}
 
 	async run() {
 		atow.logger.log(`Current schema version ${this.currentVersion}`);
@@ -255,7 +277,7 @@ export default class AtowMigrationRunner {
 			);
 		}
 
-		if (!this.needsMigration()) return;
+		if (this.noMigrationNeeded) return;
 
 		const startMessage = game.i18n.localize("ATOW.migration.begin_migration");
 
@@ -266,7 +288,7 @@ export default class AtowMigrationRunner {
 			if (this.currentVersion < migration.version) {
 				this.currentMigrationTask = migration;
 
-				await this.migrateWorld();
+				await this.performMigrations();
 
 				await game.settings.set(SYSTEM_ID, "world_schema_version", migration.version);
 			}
@@ -277,4 +299,5 @@ export default class AtowMigrationRunner {
 		atow.logger.log(endMessage);
 		ui.notifications.info(endMessage, {permanent: false});
 	}
+
 }

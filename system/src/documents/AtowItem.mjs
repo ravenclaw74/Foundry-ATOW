@@ -1,5 +1,5 @@
 /**
- * Extend the basic Item.
+ * Extend the basic Item document.
  *
  * @extends {Item}
  */

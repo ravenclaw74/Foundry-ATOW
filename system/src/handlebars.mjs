@@ -10,9 +10,11 @@ export default function registerHandlebarsHelpers() {
 		return outStr;
 	});
 
+
 	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
 		return CONFIG.ATOW[arg1][arg2] ? CONFIG.ATOW[arg1][arg2] : arg2;
 	});
+
 
 	Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {
 		switch (operator) {
@@ -43,6 +45,7 @@ export default function registerHandlebarsHelpers() {
 		}
 	});
 
+
 	// * Use with #if
 	// {{#if (or
 	//     (eq section1 "foo")
@@ -50,6 +53,7 @@ export default function registerHandlebarsHelpers() {
 	// )}}
 	// .. content
 	// {{/if}}
+	//
 	Handlebars.registerHelper({
 		eq: (v1, v2) => v1 === v2,
 		ne: (v1, v2) => v1 !== v2,

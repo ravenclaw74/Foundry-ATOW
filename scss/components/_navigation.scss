@@ -6,21 +6,24 @@ nav {
 	line-height: 1.5em;
 
 	a {
-		font-family: $font-secondary;
+		@include display-text-dim;
 		font-size: 1.2em;
-		text-overflow: ellipsis;
 		text-transform: uppercase;
-
-		color: green;
 
 		&.active {
 			color: white;
 			text-shadow: limegreen 1px 0 10px;
 			text-decoration: underline;
+
+			&:hover {
+				@include display-text;
+				color: white;
+				text-shadow: limegreen 1px 0 10px;
+			}
 		}
 
 		&:hover {
-			text-shadow: green 1px 0 10px;
+			@include display-text;
 			text-decoration: underline;
 		}
 	}

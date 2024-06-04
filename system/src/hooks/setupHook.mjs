@@ -7,6 +7,7 @@ export const setupHook = {
 
 			// Go through the CONFIG object and attempt to localize any Strings
 			// up front
+			//
 			for (const obj in CONFIG.ATOW) {
 				if ({}.hasOwnProperty.call(CONFIG.ATOW, obj)) {
 					for (const el in CONFIG.ATOW[obj]) {

@@ -1,10 +1,11 @@
 .window-content {
+	font-family: $font-primary;
 	background-image: url(../assets/ui/metal-texture.jpg);
 	background-repeat: repeat;
 
 	h1, h2, h3, h4, h5 {
 		@include p-reset;
-		@include green-display-text;
+		@include display-text;
 
 		border-bottom: 0;
 	}
@@ -15,7 +16,7 @@
 	}
 
 	input {
-		@include green-display-text;
+		@include display-text;
 		background: none;
 
 		height: max-content;
@@ -25,33 +26,28 @@
 
 		text-overflow: ellipsis;
 
-		border: none;
+		border: 1px dashed darkgreen;
+		border-radius: 0.5rem;
 
-		&:hover {
-			border: 1px dashed darkgreen;
-			border-radius: 0.5rem;
+		&:disabled {
+			border: none;
 		}
 
 		&:focus {
 			color: white;
 			border: 1px solid green;
-			box-shadow: 0 0 4px 0 green;
-			border-radius: 0.5rem;
 		}
 
 		&::placeholder {
 			@include placeholder-text;
 		}
-
 	}
 
-	.centered {
+	input[type="number"] {
 		text-align: center;
 	}
 
-	.outlined {
-		border: 1px dashed darkgreen;
-		border-radius: 0.5rem;
+	label {
+		font-weight: bold;
 	}
-
 }

@@ -1,0 +1,158 @@
+<div class="actor-details">
+	<div class="actor-condition">
+		{{!-- STANDARD DAMAGE --}}
+		<label>
+			{{localize "ATOW.character.condition.standard_damage"}}
+		</label>
+		<input
+			class="num-short-3"
+			data-dtype="Number"
+			name="system.damage.standard.value"
+			type="number"
+			value="{{data.system.damage.standard.value}}"
+		>
+		<p>/</p>
+		<input
+			class="num-short-3"
+			type="number"
+			data-dtype="Number"
+			data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}"
+			name="system.damage.standard.max"
+			value="{{data.system.damage.standard.max}}"
+			disabled
+		>
+
+		{{!-- FATIGUE DAMAGE --}}
+		<label>
+			{{localize "ATOW.character.condition.fatigue_damage"}}
+		</label>
+		<input
+			class="num-short-3"
+			data-dtype="Number"
+			name="system.damage.fatigue.value"
+			type="number"
+			value="{{data.system.damage.fatigue.value}}"
+		>
+		<p>/</p>
+		<input
+			class="num-short-3"
+			data-dtype="Number"
+			data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}"
+			name="system.damage.fatigue.max"
+			type="number"
+			value="{{data.system.damage.fatigue.max}}"
+			disabled
+		>
+	</div>
+
+	<div class="actor-condition-buttons">
+		<div class="atow-select">
+			<label>
+				<input
+					data-dtype="Boolean"
+					name="system.damage.stunned"
+					type="checkbox"
+					{{checked data.system.damage.stunned}}
+				>
+				<span>
+					{{localize "ATOW.character.condition.stunned"}}
+				</span>
+			</label>
+		</div>
+
+		<div class="atow-select">
+			<label>
+				<input
+					data-dtype="Boolean"
+					name="system.damage.unconscious"
+					type="checkbox"
+					{{checked data.system.damage.unconscious}}
+				>
+				<span>
+					{{localize "ATOW.character.condition.unconscious"}}
+				</span>
+			</label>
+		</div>
+	</div>
+
+	<div
+		class="actor-speeds"
+		data-tooltip="{{localize 'ATOW.character.movement_speed.tooltip'}}"
+	>
+		<div class="actor-speed">
+			<label>
+				{{localize "ATOW.character.movement.walk"}}
+			</label>
+			<input
+				data-dtype="Number"
+				data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}"
+				name="system.movement.walk"
+				type="number"
+				value="{{data.system.movement.walk}}"
+				disabled
+			>
+
+			<label>
+				{{localize "ATOW.character.movement.run_evade"}}
+			</label>
+			<input
+				data-dtype="Number"
+				data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}"
+				name="system.movement.run"
+				type="number"
+				value="{{data.system.movement.run}}"
+				disabled
+			>
+
+			<label>
+				{{localize "ATOW.character.movement.sprint"}}
+			</label>
+			<input
+				data-dtype="Number"
+				data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}"
+				name="system.movement.sprint"
+				type="number"
+				value="{{data.system.movement.sprint}}"
+				disabled
+			>
+		</div>
+
+		<div class="actor-speed">
+			<label>
+				{{localize "ATOW.character.movement.climb"}}
+			</label>
+			<input
+				data-dtype="Number"
+				data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}"
+				name="system.movement.climb"
+				type="number"
+				value="{{data.system.movement.climb}}"
+				disabled
+			>
+
+			<label>
+				{{localize "ATOW.character.movement.crawl"}}
+			</label>
+			<input
+				data-dtype="Number"
+				data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}"
+				name="system.movement.crawl"
+				type="number"
+				value="{{data.system.movement.crawl}}"
+				disabled
+			>
+
+			<label>
+				{{localize "ATOW.character.movement.swim"}}
+			</label>
+			<input
+				data-dtype="Number"
+				data-tooltip="{{localize 'ATOW.sheet_warnings.derived_value'}}"
+				name="system.movement.swim"
+				type="number"
+				value="{{data.system.movement.swim}}"
+				disabled
+			>
+		</div>
+	</div>
+</div>

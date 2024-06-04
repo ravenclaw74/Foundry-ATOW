@@ -11,6 +11,7 @@ import preloadHandlebarsTemplates from "../templates.mjs";
 import registerHandlebarsHelpers from "../handlebars.mjs";
 import registerSystemSettings from "../settings.mjs";
 
+
 export async function initHook() {
 	console.debug(`${SYSTEM_NAME} | Running init hook`);
 
@@ -36,11 +37,12 @@ export async function initHook() {
 	AtowHooks.attach();
 }
 
+
 function registerDocumentClasses() {
-	// Define custom Document classes
 	CONFIG.Actor.documentClass = documents.AtowActor;
 	CONFIG.Item.documentClass = documents.AtowItem;
 }
+
 
 function registerDocumentSheets() {
 	Actors.unregisterSheet("core", ActorSheet);
